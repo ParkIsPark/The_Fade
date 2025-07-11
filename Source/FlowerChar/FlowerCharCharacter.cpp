@@ -68,6 +68,8 @@ void AFlowerCharCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 	// Add Input Mapping Context
 	if (APlayerController* PlayerController = Cast<APlayerController>(GetController()))
 	{
+		PlayerController->bShowMouseCursor = true;
+
 		if (UEnhancedInputLocalPlayerSubsystem* Subsystem = ULocalPlayer::GetSubsystem<UEnhancedInputLocalPlayerSubsystem>(PlayerController->GetLocalPlayer()))
 		{
 			Subsystem->AddMappingContext(DefaultMappingContext, 0);

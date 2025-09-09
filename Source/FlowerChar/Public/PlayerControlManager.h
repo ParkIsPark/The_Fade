@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
+#include "ApporachInteractTrigger.h"
+
 #include "PlayerControlManager.generated.h"
 
 /**
@@ -26,6 +28,18 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 public:
-	// 우클릭 좌표 얻어오기
-	bool GetRightClickVector(FVector& OutLocation);
+	// 클릭 좌표 얻어오기
+	bool GetClickVector(FVector& OutLocation);
+
+	// 마우스 위치 아래에 오브젝트 타입 확인
+	AActor* GetMouseCursorUnderActor();
+
+	
+
+	// 상호작용 가능한 오브젝트인지 확인
+	void IsInteractableActor();
+	AApporachInteractTrigger* PreviousApproachTriggerActor;//이전에 감지한 오브젝트
+
+
+
 };

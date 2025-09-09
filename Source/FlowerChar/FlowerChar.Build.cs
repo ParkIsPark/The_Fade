@@ -16,7 +16,8 @@ public class FlowerChar : ModuleRules
 				"InputCore", 
 				"EnhancedInput", 
 				"NavigationSystem", 
-				"AIModule" 
+				"AIModule" , 
+				"UMG"
 			});
 	}
 }

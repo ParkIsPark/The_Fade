@@ -18,3 +18,4 @@ Saved/
 *.uproject
 *.xcodeproj
 *.xcworkspace
+.vsconfig
